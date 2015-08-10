@@ -32,7 +32,7 @@
 /* Begin PBXFileReference section */
 		1947659101696D128B7C9222 /* Pods-CMP20DRIVER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CMP20DRIVER.release.xcconfig"; path = "Pods/Target Support Files/Pods-CMP20DRIVER/Pods-CMP20DRIVER.release.xcconfig"; sourceTree = "<group>"; };
 		5853D7B15416E1AE4BFB4C6E /* libPods-CMP20DRIVER.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CMP20DRIVER.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6790C5181B745C6F0018AFA3 /* libCMP20DRIVER.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCMP20DRIVER.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		67452FD91B7851EA009579E5 /* libCMP20DRIVER.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCMP20DRIVER.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6790C51B1B745C6F0018AFA3 /* CMP20DRIVER.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMP20DRIVER.h; sourceTree = "<group>"; };
 		6790C51D1B745C6F0018AFA3 /* CMP20DRIVER.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMP20DRIVER.m; sourceTree = "<group>"; };
 		6790C5251B745EF50018AFA3 /* CallbackData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallbackData.h; sourceTree = "<group>"; };
@@ -79,18 +79,10 @@
 			isa = PBXGroup;
 			children = (
 				6790C51A1B745C6F0018AFA3 /* CMP20DRIVER */,
-				6790C5191B745C6F0018AFA3 /* Products */,
 				22C2FCBA240AD28CCD7CE1C4 /* Pods */,
 				0862CB4D4F735354A26E2C6E /* Frameworks */,
+				67452FD91B7851EA009579E5 /* libCMP20DRIVER.a */,
 			);
-			sourceTree = "<group>";
-		};
-		6790C5191B745C6F0018AFA3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6790C5181B745C6F0018AFA3 /* libCMP20DRIVER.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6790C51A1B745C6F0018AFA3 /* CMP20DRIVER */ = {
@@ -125,7 +117,7 @@
 			);
 			name = CMP20DRIVER;
 			productName = CMP20DRIVER;
-			productReference = 6790C5181B745C6F0018AFA3 /* libCMP20DRIVER.a */;
+			productReference = 67452FD91B7851EA009579E5 /* libCMP20DRIVER.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -150,7 +142,7 @@
 				en,
 			);
 			mainGroup = 6790C50F1B745C6F0018AFA3;
-			productRefGroup = 6790C5191B745C6F0018AFA3 /* Products */;
+			productRefGroup = 6790C50F1B745C6F0018AFA3;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -249,8 +241,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
+				SYMROOT = build;
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 			};
 			name = Debug;
@@ -294,8 +287,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
+				SYMROOT = build;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 			};
@@ -312,6 +306,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SYMROOT = build;
 			};
 			name = Debug;
 		};
@@ -326,6 +321,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SYMROOT = build;
 			};
 			name = Release;
 		};
